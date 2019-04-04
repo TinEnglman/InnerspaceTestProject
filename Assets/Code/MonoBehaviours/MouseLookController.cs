@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class MouseLook : MonoBehaviour
+public class MouseLookController : MonoBehaviour
 {
     private const string InputMouseX = "Mouse X";
     private const string InputMouseY = "Mouse Y";
