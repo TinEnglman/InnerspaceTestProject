@@ -2,25 +2,15 @@
 
 public class LiftController : MonoBehaviour
 {
+    [SerializeField]
+    private int _sceneIndex;
+    [SerializeField]
+    private GameObject _frontWall;
 
-    [SerializeField]
-    private GameObject leftWall;
-    [SerializeField]
-    private GameObject rightWall;
-    [SerializeField]
-    private GameObject frontWall;
-    [SerializeField]
-    private GameObject backWall;
+    public ISceneLoader SceneLoader { get; set; }
 
-
-    void Start()
+    private void OnTriggerEnter(Collider other)
     {
-        
-    }
-
-
-    void Update()
-    {
-        
+        SceneLoader.LoadScene(_sceneIndex);
     }
 }

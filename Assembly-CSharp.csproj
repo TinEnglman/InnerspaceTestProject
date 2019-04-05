@@ -60,9 +60,12 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Assets\Code\ISceneLoader.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\CharacterController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LiftController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
+    <Compile Include="Assets\Code\SceneController.cs" />
+    <Compile Include="Assets\Code\SceneLoader.cs" />
     <Compile Include="Assets\External\NatureManufacture Assets - Trials Not Full Resolution\NatureManufacture Wind\NM_Wind.cs" />
     <None Include="Assets\External\NatureManufacture Assets - Trials Not Full Resolution\Foliage Shaders\Cross_Model_Shader.shader" />
     <None Include="Assets\External\NatureManufacture Assets - Trials Not Full Resolution\EasyRoads-HD_Add_ON\Shaders\Decal_Metalic_Road_Shader Parallax ArrayTrial.shader" />
