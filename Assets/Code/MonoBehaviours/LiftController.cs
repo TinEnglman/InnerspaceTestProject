@@ -3,9 +3,9 @@
 public class LiftController : MonoBehaviour
 {
     [SerializeField]
-    private int _sceneIndex;
+    private int _sceneIndex = 0;
     [SerializeField]
-    private GameObject _frontWall;
+    private GameObject _frontWall = null;
 
     public ISceneLoader SceneLoader { get; set; }
 
