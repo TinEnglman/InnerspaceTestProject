@@ -63,6 +63,7 @@
     <Compile Include="Assets\Code\ISceneLoader.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\CharacterController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LiftController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\LoadingScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
     <Compile Include="Assets\Code\SceneController.cs" />
     <Compile Include="Assets\Code\SceneLoader.cs" />

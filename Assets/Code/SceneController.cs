@@ -6,9 +6,13 @@ public class SceneController : MonoBehaviour
 {
     [SerializeField]
     private LiftController _liftController;
+    [SerializeField]
+    private LoadingScreenController _loadingScreenController;
 
     void Start()
     {
-        _liftController.SceneLoader = new SceneLoader();
+        ISceneLoader sceneLoader = new SceneLoader();
+        _liftController.SceneLoader = sceneLoader;
+        _loadingScreenController.SceneLoader = sceneLoader;
     }
 }

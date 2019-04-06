@@ -7360,6 +7360,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 1056521011}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1063211852 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8878132530003112879, guid: 113ab644160fbf848875c3f1d6df40ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8878132529756086499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -113659843, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!4 &1077700567 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4880783345098562, guid: 724efb1a9e0513442b404b6172e87e65,
@@ -7435,6 +7447,18 @@ Transform:
     type: 3}
   m_PrefabInstance: {fileID: 190649480}
   m_PrefabAsset: {fileID: 0}
+--- !u!114 &1110055324 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 8878132529756086499}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cee8eb9399457ce4fb92f1fb22cd8401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &1113597521
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -7680,6 +7704,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _liftController: {fileID: 1530400573}
+  _loadingScreenController: {fileID: 1110055324}
 --- !u!4 &1193088763 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4456915303471134, guid: 2ff8d71f91754e744965fa3efa8a8fcf,
@@ -13820,5 +13845,10 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _loadingSlider
+      value: 
+      objectReference: {fileID: 1063211852}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113ab644160fbf848875c3f1d6df40ce, type: 3}
