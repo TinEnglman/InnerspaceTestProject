@@ -11,6 +11,11 @@ public class SceneController : MonoBehaviour
 
     void Start()
     {
+        LocalizationManager localizationManager = new LocalizationManager();
+        localizationManager.TextLoader = new TextLoader();
+        localizationManager.LoadData();
+
+
         ISceneLoader sceneLoader = new SceneLoader();
         _liftController.SceneLoader = sceneLoader;
         _loadingScreenController.SceneLoader = sceneLoader;

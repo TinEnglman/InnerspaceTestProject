@@ -61,12 +61,16 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Assets\Code\ISceneLoader.cs" />
+    <Compile Include="Assets\Code\ITextLoader.cs" />
+    <Compile Include="Assets\Code\LocalizationData.cs" />
+    <Compile Include="Assets\Code\LocalizationManager.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\CharacterController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LiftController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LoadingScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
-    <Compile Include="Assets\Code\SceneController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\SceneController.cs" />
     <Compile Include="Assets\Code\SceneLoader.cs" />
+    <Compile Include="Assets\Code\TextLoader.cs" />
     <Compile Include="Assets\External\FG3D\Animation\Mecanim\ControlScript.cs" />
     <Compile Include="Assets\External\FG3D\Vendor\Unity\Shaders\Hair\HairRenderer.cs" />
     <Compile Include="Assets\External\FG3D\Vendor\Unity\Shaders\UniqueShadow\UniqueShadow.cs" />

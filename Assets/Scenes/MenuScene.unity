@@ -286,6 +286,16 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadingScreen
       objectReference: {fileID: 0}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _loadingSlider
+      value: 
+      objectReference: {fileID: 457648246}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _titleLabel
+      value: 
+      objectReference: {fileID: 1308738242}
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -366,11 +376,6 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
-    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
-        type: 3}
-      propertyPath: _loadingSlider
-      value: 
-      objectReference: {fileID: 457648246}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113ab644160fbf848875c3f1d6df40ce, type: 3}
 --- !u!114 &1242860870 stripped
@@ -383,6 +388,18 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cee8eb9399457ce4fb92f1fb22cd8401, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+--- !u!114 &1308738242 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 8878132529051800184, guid: 113ab644160fbf848875c3f1d6df40ce,
+    type: 3}
+  m_PrefabInstance: {fileID: 1048721249}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1595998770
