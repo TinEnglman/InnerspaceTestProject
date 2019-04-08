@@ -4,7 +4,6 @@ using UnityEngine;
 
 public interface ITextLoader
 {
-    LocalizationData LoadedData { get; set; }
-    void LoadText(string fileName);
+    Dictionary<string, string> LoadText(string fileName);
 }
 

@@ -1,16 +1,13 @@
-[
-  {
-    "Key": "ENTER_LIFT",
-    "LocalizedValue" : {
-      "de_AT": "Aufzug betreten",
-      "en-US": "Enter lift"
-    }
-  },
-  {
-    "Key": "LOADING_STARTED",
-    "LocalizedValue" : {
-      "de_AT": "Beladung...",
-      "en-US": "Loading..."
-    }
-  }
-]
+{ 
+	"keymap": 
+	[
+		{
+			"key": "ENTER_LIFT",
+			"localizedValue": "Enter lift"
+		},
+		  {
+			"key": "LOADING_STARTED",
+			"localizedValue": "Loading..."
+		  }
+	]
+}

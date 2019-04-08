@@ -13,11 +13,12 @@ public class LoadingScreenController : MonoBehaviour
 
     void Start()
     {
-        _titleLabel.text = LocalizationManager.getText("ENTER_LIFT");
+
     }
 
     void Update()
     {
         _loadingSlider.value = SceneLoader.Progress;
+        _titleLabel.text = LocalizationManager.Instance.GetText("ENTER_LIFT");
     }
 }
