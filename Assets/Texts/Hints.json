@@ -1,43 +1,29 @@
-[
-  {
-    "Key": "HINT_1",
-    "LocalizedValue" : {
-      "de_AT": "Sehr nützlicher Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Very useful advice. Additional advice to fill up space. Even more advice."
-    }
-  },
-  {
-    "Key": "HINT_2",
-    "LocalizedValue" : {
-      "de_AT": "Äußerst nützliche Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Extremly useful advice. Additional advice to fill up space. Even more advice."
-    }
-  },
-   {
-    "Key": "HINT_3",
-    "LocalizedValue" : {
-      "de_AT": "Hervorragend nützliche Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Magnificently useful advice. Additional advice to fill up space. Even more advice."
-    }
-  },
-   {
-    "Key": "HINT_4",
-    "LocalizedValue" : {
-      "de_AT": "Außerordentlich nützlicher Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Extraordinarily useful advice. Additional advice to fill up space. Even more advice."
-    }
-  },
-   {
-    "Key": "HINT_5",
-    "LocalizedValue" : {
-      "de_AT": "Ganzheitlich nützliche Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Unitentionaly useful advice. Additional advice to fill up space. Even more advice."
-    }
-  },
-   {
-    "Key": "HINT_6",
-    "LocalizedValue" : {
-      "de_AT": "Mysteriös nützliche Ratschläge. Zusätzliche Hinweise, um Platz zu füllen. Noch mehr Ratschläge.",
-      "en-US": "Mysteriously useful advice. Additional advice to fill up space. Even more advice."
-  },
-]
+{
+	"keymap": 
+	[
+		{
+			"key": "HINT_1",
+			"localizedValue" : "Very useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_2",
+			"localizedValue" : "Extremly useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_3",
+			"localizedValue" : "Magnificently useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_4",
+			"localizedValue" : "Extraordinarily useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_5",
+			"localizedValue" : "Unitentionaly useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_6",
+			"localizedValue" : "Mysteriously useful advice. Additional advice to fill up space. Even more advice."
+		}
+	]
+}

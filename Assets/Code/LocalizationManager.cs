@@ -1,14 +1,14 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using System.Collections.Generic;
 using UnityEngine;
+using System.IO;
 
 public class LocalizationManager
 {
+    public ITextLoader TextLoader { get; set; }
+
     private static LocalizationManager _instance;
     private Dictionary<string, string> _localizations = new Dictionary<string, string>();
  
-    public ITextLoader TextLoader { get;  set; }
-
     public static LocalizationManager Instance
     {
         get
@@ -21,18 +21,24 @@ public class LocalizationManager
         }
     }
 
+    public string FolderName { get; set; }
+
     public void LoadData()
     {
-        Dictionary<string, string> addLocalizations = TextLoader.LoadText("LoadingScreen.json"); // create list
-        
-        foreach(var localization in addLocalizations)
-        {
-            _localizations.Add(localization.Key, localization.Value);
-        }
+        DirectoryInfo info = new DirectoryInfo(Application.dataPath + "/" + FolderName);
+        var fileInfo = info.GetFiles();
 
-        //_localizations[TextLoader.LoadedData.key] = TextLoader.LoadedData.localizedValue;
-        //TextLoader.LoadText("Hints.json");
-        //_localizations[TextLoader.LoadedData.key] = TextLoader.LoadedData.localizedValue;
+        foreach (var file in fileInfo)
+        {
+            if (file.Extension == ".json")
+            { 
+                Dictionary<string, string> addLocalizations = TextLoader.LoadText(file.FullName);
+                foreach (var localization in addLocalizations)
+                {
+                    _localizations.Add(localization.Key, localization.Value);
+                }
+            }
+        }
     }
 
     public string GetText(string textKey)

@@ -5,6 +5,8 @@ using UnityEngine;
 public class SceneController : MonoBehaviour
 {
     [SerializeField]
+    private string _textFolderName = "Texts";
+    [SerializeField]
     private LiftController _liftController;
     [SerializeField]
     private LoadingScreenController _loadingScreenController;
@@ -12,6 +14,7 @@ public class SceneController : MonoBehaviour
     void Start()
     {
         LocalizationManager.Instance.TextLoader = new TextLoader();
+        LocalizationManager.Instance.FolderName = _textFolderName;
         LocalizationManager.Instance.LoadData();
 
         ISceneLoader sceneLoader = new SceneLoader();
