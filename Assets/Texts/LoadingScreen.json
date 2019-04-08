@@ -1,0 +1,16 @@
+[
+  {
+    "Key": "ENTER_LIFT",
+    "LocalizedValue" : {
+      "de_AT": "Aufzug betreten",
+      "en-US": "Enter lift"
+    }
+  },
+  {
+    "Key": "LOADING_STARTED",
+    "LocalizedValue" : {
+      "de_AT": "Beladung...",
+      "en-US": "Loading..."
+    }
+  }
+]
