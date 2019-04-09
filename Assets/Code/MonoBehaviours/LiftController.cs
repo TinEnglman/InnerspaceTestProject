@@ -13,7 +13,7 @@ public class LiftController : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        //SceneLoader.LoadScene(_sceneIndex);
-        _liftDoor.SetOpen(false);
+        SceneLoader.LoadScene(_sceneIndex);
+        //_liftDoor.SetOpen(false);
     }
 }

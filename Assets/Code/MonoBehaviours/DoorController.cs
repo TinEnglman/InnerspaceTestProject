@@ -3,40 +3,52 @@
 public class DoorController : MonoBehaviour
 {
     [SerializeField]
-    private float ClosedDoorY = 1.95f;
+    private float ClosedDoorY = 0;
     [SerializeField]
-    private float OpenedDoorY = 1.95f;
+    private float OpenedDoorY = 0;
     [SerializeField]
     private float DoorSpeed = 0.1f;
+    [SerializeField]
+    private TriggerController _triggerController = null;
 
-    private bool _isOpen = false;
-
-    void Start()
-    {
-        _isOpen = true;
-    }
-
-    void Update()
+    void FixedUpdate()
     {
         float doorYDiff = 0;
-        if (_isOpen && transform.position.y > OpenedDoorY)
+        if (_triggerController.IsTriggered && !Mathf.Approximately(transform.position.y, OpenedDoorY))
         {
-            doorYDiff = -Time.deltaTime * DoorSpeed;
+            if (transform.position.y > OpenedDoorY)
+            {
+                doorYDiff = -Time.deltaTime * DoorSpeed;
+                if (transform.position.y + doorYDiff < OpenedDoorY)
+                {
+                    doorYDiff = OpenedDoorY - transform.position.y;
+                }
+            }
+            if (transform.position.y < OpenedDoorY)
+            {
+                doorYDiff = Time.deltaTime * DoorSpeed;
+                if (transform.position.y + doorYDiff > OpenedDoorY)
+                {
+                    doorYDiff = OpenedDoorY - transform.position.y;
+                }
+            }
         }
 
-        if (!_isOpen && transform.position.y < OpenedDoorY)
+        if (!_triggerController.IsTriggered && !Mathf.Approximately(transform.position.y, ClosedDoorY))
         {
-            doorYDiff = Time.deltaTime * DoorSpeed;
+            if (transform.position.y > ClosedDoorY)
+            {
+                doorYDiff = -Time.deltaTime * DoorSpeed;
+            }
+            if (transform.position.y < ClosedDoorY)
+            {
+                doorYDiff = Time.deltaTime * DoorSpeed;
+            }
         }
 
-        if  (doorYDiff != 0)
+        if (doorYDiff != 0)
         {
-            transform.Translate (new Vector3(0, doorYDiff, 0));
+            transform.Translate(new Vector3(0, doorYDiff, 0));
         }
-    }
-
-    public void SetOpen(bool isOpen)
-    {
-        _isOpen = isOpen;
     }
 }

@@ -192,6 +192,7 @@ GameObject:
   m_Component:
   - component: {fileID: 6906058706815054723}
   - component: {fileID: 7481941812081624060}
+  - component: {fileID: 6963689287118964123}
   m_Layer: 0
   m_Name: DoorPanelTrigger
   m_TagString: Untagged
@@ -226,6 +227,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
+--- !u!114 &6963689287118964123
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2112779674420597074}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf18ef897256a894a86a72205eea6cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &2145859532502830535
 GameObject:
   m_ObjectHideFlags: 0
@@ -420,7 +433,8 @@ GameObject:
   - component: {fileID: 9037747369265371559}
   - component: {fileID: 9087895147605144646}
   - component: {fileID: 3805322815115401839}
-  - component: {fileID: 4065080638937003938}
+  - component: {fileID: 955772899682625248}
+  - component: {fileID: 2561771055351613676}
   m_Layer: 0
   m_Name: DoorPanel
   m_TagString: Untagged
@@ -501,7 +515,7 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &4065080638937003938
+--- !u!114 &955772899682625248
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -516,6 +530,21 @@ MonoBehaviour:
   ClosedDoorY: -0.3
   OpenedDoorY: -0.5
   DoorSpeed: 1
+--- !u!114 &2561771055351613676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3999069569005287969}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f111e23586397144b58d5621f9abbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedDoorY: 1.95
+  OpenedDoorY: 1.95
+  DoorSpeed: 0.1
 --- !u!1 &4535722044601593434
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,7 +557,8 @@ GameObject:
   - component: {fileID: 316246535995176548}
   - component: {fileID: 2991619334462444262}
   - component: {fileID: 3273232065703549799}
-  - component: {fileID: 5121390867977991879}
+  - component: {fileID: 8116976878989070494}
+  - component: {fileID: 8013062581599382364}
   m_Layer: 0
   m_Name: Door
   m_TagString: Untagged
@@ -544,7 +574,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 4535722044601593434}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0.07737537, y: -2.5, z: -0.208}
+  m_LocalPosition: {x: 0.07737537, y: 1.39, z: -0.208}
   m_LocalScale: {x: 4, y: 4, z: 0.2}
   m_Children:
   - {fileID: 1856504644297575943}
@@ -609,7 +639,22 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 0, z: 0}
---- !u!114 &5121390867977991879
+--- !u!114 &8116976878989070494
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4535722044601593434}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 0f111e23586397144b58d5621f9abbd9, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ClosedDoorY: 1.39
+  OpenedDoorY: -2.68
+  DoorSpeed: 0.25
+--- !u!114 &8013062581599382364
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -623,7 +668,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   ClosedDoorY: 1.95
   OpenedDoorY: 1.95
-  DoorSpeed: 0.25
+  DoorSpeed: 0.1
 --- !u!1 &5265315405108452603
 GameObject:
   m_ObjectHideFlags: 0
@@ -634,6 +679,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1856504644297575943}
   - component: {fileID: 3453339236307893752}
+  - component: {fileID: 6759304341147924218}
   m_Layer: 0
   m_Name: DoorTrigger
   m_TagString: Untagged
@@ -668,6 +714,18 @@ BoxCollider:
   serializedVersion: 2
   m_Size: {x: 1, y: 1, z: 1}
   m_Center: {x: 0, y: 1, z: 0}
+--- !u!114 &6759304341147924218
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 5265315405108452603}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cf18ef897256a894a86a72205eea6cd8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &6576222099889173112
 GameObject:
   m_ObjectHideFlags: 0
