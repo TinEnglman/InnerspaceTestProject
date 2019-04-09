@@ -21,30 +21,40 @@ public class LocalizationManager
         }
     }
 
-    public string FolderName { get; set; }
-
-    public void LoadData()
-    {
-        DirectoryInfo info = new DirectoryInfo(Application.dataPath + "/" + FolderName);
-        var fileInfo = info.GetFiles();
-
-        foreach (var file in fileInfo)
-        {
-            if (file.Extension == ".json")
-            { 
-                Dictionary<string, string> addLocalizations = TextLoader.LoadText(file.FullName);
-                foreach (var localization in addLocalizations)
-                {
-                    _localizations.Add(localization.Key, localization.Value);
-                }
-            }
-        }
-    }
-
     public string GetText(string textKey)
     {
         return _localizations[textKey];
     }
 
+    public void LoadData(string folderName)
+    {
+        DirectoryInfo info = new DirectoryInfo(Application.dataPath + "/" + folderName);
+        var fileInfo = info.GetFiles();
+
+        foreach (var file in fileInfo)
+        {
+            Dictionary<string, string> addLocalizations = LoadFile(file);
+            AddLocalizations(addLocalizations);
+        }
+    }
+
+    private Dictionary<string, string> LoadFile(FileInfo file)
+    {
+        Dictionary<string, string> localizations = new Dictionary<string, string>();
+        if (file.Extension == ".json")
+        {
+            localizations = TextLoader.LoadText(file.FullName);
+        }
+        return localizations;
+    }
+
+    private void AddLocalizations(Dictionary<string, string> addLocalizations)
+    {
+        foreach (var localization in addLocalizations)
+        {
+            _localizations.Add(localization.Key, localization.Value);
+        }
+    }
+    
     private LocalizationManager() { }
 }

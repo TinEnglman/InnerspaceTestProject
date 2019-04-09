@@ -2,8 +2,6 @@
 
 public class LiftController : MonoBehaviour
 {
-
-
     [SerializeField]
     private int _sceneIndex = 0;
     [SerializeField]

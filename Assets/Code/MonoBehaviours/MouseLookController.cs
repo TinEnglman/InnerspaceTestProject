@@ -13,14 +13,13 @@ public class MouseLookController : MonoBehaviour
     private Vector2 mouseLook;
     private Vector2 smoothV;
 
-    GameObject character;
+    private GameObject character;
 
     void Start()
     {
         character = this.transform.parent.gameObject; // fragile construct; refactor
     }
 
-    
     void Update()
     {
         Vector2 mouseDiffVector = new Vector2(Input.GetAxisRaw(InputMouseX), Input.GetAxisRaw(InputMouseY));

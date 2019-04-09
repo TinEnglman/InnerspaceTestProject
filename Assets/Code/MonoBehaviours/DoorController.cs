@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DoorController : MonoBehaviour
 {
@@ -12,13 +10,12 @@ public class DoorController : MonoBehaviour
     private float DoorSpeed = 0.1f;
 
     private bool _isOpen = false;
-    // Start is called before the first frame update
+
     void Start()
     {
         _isOpen = true;
     }
 
-    // Update is called once per frame
     void Update()
     {
         float doorYDiff = 0;
