@@ -65,6 +65,7 @@
     <Compile Include="Assets\Code\LocalizationData.cs" />
     <Compile Include="Assets\Code\LocalizationManager.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\CharacterController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\DoorController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LiftController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LoadingScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
