@@ -1,0 +1,29 @@
+{
+	"keymap": 
+	[
+		{
+			"key": "HINT_1",
+			"localizedValue" : "Very useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_2",
+			"localizedValue" : "Extremly useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_3",
+			"localizedValue" : "Magnificently useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_4",
+			"localizedValue" : "Extraordinarily useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_5",
+			"localizedValue" : "Unitentionaly useful advice. Additional advice to fill up space. Even more advice."
+		},
+		{
+			"key": "HINT_6",
+			"localizedValue" : "Mysteriously useful advice. Additional advice to fill up space. Even more advice."
+		}
+	]
+}
