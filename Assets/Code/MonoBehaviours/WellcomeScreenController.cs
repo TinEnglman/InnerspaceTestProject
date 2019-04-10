@@ -33,6 +33,13 @@ public class WellcomeScreenController : MonoBehaviour
         _hintLabel.text = LocalizationManager.Instance.GetText(_currentHintTextKey);
     }
 
+    public void Hide()
+    {
+        _loadingSlider.gameObject.SetActive(false);
+        _titleLabel.gameObject.SetActive(false);
+        _hintLabel.gameObject.SetActive(false);
+    }
+
     private void SetTitleTextKey(string textKey)
     {
         _currentTitleTextKey = textKey;

@@ -5,12 +5,10 @@ using UnityEngine;
 public class LiftExitController : MonoBehaviour
 {
     [SerializeField]
-    private DoorController _doorController = null;
-    [SerializeField]
     private WellcomeScreenController _wellcomeScreenController = null;
 
     private void OnTriggerExit(Collider other)
     {
-        //_wellcomeScreenController.
+        _wellcomeScreenController.Hide();
     }
 }
