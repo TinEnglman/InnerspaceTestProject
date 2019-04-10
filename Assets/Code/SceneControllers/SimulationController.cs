@@ -11,7 +11,7 @@ public class SimulationController : MonoBehaviour
 
     void Start()
     {
-        LocalizationManager.Instance.TextLoader = new TextLoader();
-        LocalizationManager.Instance.LoadData(_textFolderName);
+        //LocalizationManager.Instance.TextLoader = new TextLoader();
+        //LocalizationManager.Instance.LoadData(_textFolderName);
     }
 }

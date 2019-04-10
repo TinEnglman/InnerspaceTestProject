@@ -568,6 +568,11 @@ PrefabInstance:
       propertyPath: m_Name
       value: LiftEnter
       objectReference: {fileID: 0}
+    - target: {fileID: 2369840595925032801, guid: 55cf2701f2a71c042921d6682c826cf0,
+        type: 3}
+      propertyPath: _sceneIndex
+      value: 1
+      objectReference: {fileID: 0}
     - target: {fileID: 17463153954210931, guid: 55cf2701f2a71c042921d6682c826cf0,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -682,11 +687,6 @@ PrefabInstance:
         type: 3}
       propertyPath: ClosedDoorY
       value: 0.1
-      objectReference: {fileID: 0}
-    - target: {fileID: 2369840595925032801, guid: 55cf2701f2a71c042921d6682c826cf0,
-        type: 3}
-      propertyPath: _sceneIndex
-      value: 1
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 8013062581599382364, guid: 55cf2701f2a71c042921d6682c826cf0, type: 3}
