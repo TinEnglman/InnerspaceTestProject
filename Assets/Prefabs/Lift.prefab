@@ -530,6 +530,7 @@ MonoBehaviour:
   ClosedDoorY: -0.3
   OpenedDoorY: -0.5
   DoorSpeed: 1
+  _triggerController: {fileID: 0}
 --- !u!114 &2561771055351613676
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -545,6 +546,7 @@ MonoBehaviour:
   ClosedDoorY: 1.95
   OpenedDoorY: 1.95
   DoorSpeed: 0.1
+  _triggerController: {fileID: 0}
 --- !u!1 &4535722044601593434
 GameObject:
   m_ObjectHideFlags: 0
@@ -576,8 +578,7 @@ Transform:
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0.07737537, y: 1.39, z: -0.208}
   m_LocalScale: {x: 4, y: 4, z: 0.2}
-  m_Children:
-  - {fileID: 1856504644297575943}
+  m_Children: []
   m_Father: {fileID: 17463153954210931}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -654,6 +655,7 @@ MonoBehaviour:
   ClosedDoorY: 1.39
   OpenedDoorY: -2.68
   DoorSpeed: 0.25
+  _triggerController: {fileID: 0}
 --- !u!114 &8013062581599382364
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -669,63 +671,7 @@ MonoBehaviour:
   ClosedDoorY: 1.95
   OpenedDoorY: 1.95
   DoorSpeed: 0.1
---- !u!1 &5265315405108452603
-GameObject:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  serializedVersion: 6
-  m_Component:
-  - component: {fileID: 1856504644297575943}
-  - component: {fileID: 3453339236307893752}
-  - component: {fileID: 6759304341147924218}
-  m_Layer: 0
-  m_Name: DoorTrigger
-  m_TagString: Untagged
-  m_Icon: {fileID: 0}
-  m_NavMeshLayer: 0
-  m_StaticEditorFlags: 0
-  m_IsActive: 1
---- !u!4 &1856504644297575943
-Transform:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265315405108452603}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
-  m_Father: {fileID: 3373197515326673320}
-  m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!65 &3453339236307893752
-BoxCollider:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265315405108452603}
-  m_Material: {fileID: 0}
-  m_IsTrigger: 1
-  m_Enabled: 1
-  serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 1, z: 0}
---- !u!114 &6759304341147924218
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 5265315405108452603}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf18ef897256a894a86a72205eea6cd8, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
+  _triggerController: {fileID: 0}
 --- !u!1 &6576222099889173112
 GameObject:
   m_ObjectHideFlags: 0

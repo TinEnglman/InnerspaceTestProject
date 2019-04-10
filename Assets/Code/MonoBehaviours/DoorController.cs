@@ -39,10 +39,18 @@ public class DoorController : MonoBehaviour
             if (transform.position.y > ClosedDoorY)
             {
                 doorYDiff = -Time.deltaTime * DoorSpeed;
+                if (transform.position.y + doorYDiff < ClosedDoorY)
+                {
+                    doorYDiff = ClosedDoorY - transform.position.y;
+                }
             }
             if (transform.position.y < ClosedDoorY)
             {
                 doorYDiff = Time.deltaTime * DoorSpeed;
+                if (transform.position.y + doorYDiff > ClosedDoorY)
+                {
+                    doorYDiff = ClosedDoorY - transform.position.y;
+                }
             }
         }
 

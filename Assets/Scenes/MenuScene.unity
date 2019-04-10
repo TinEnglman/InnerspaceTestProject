@@ -287,7 +287,7 @@ PrefabInstance:
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.678
+      value: -0.399
       objectReference: {fileID: 0}
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
@@ -297,7 +297,7 @@ PrefabInstance:
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 26.39
+      value: 26.393
       objectReference: {fileID: 0}
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
@@ -388,18 +388,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1588438222 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6759304341147924218, guid: 55cf2701f2a71c042921d6682c826cf0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2020711735}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: cf18ef897256a894a86a72205eea6cd8, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1595998770
@@ -630,7 +618,22 @@ PrefabInstance:
         type: 3}
       propertyPath: _triggerController
       value: 
-      objectReference: {fileID: 1588438222}
+      objectReference: {fileID: 1848255074}
+    - target: {fileID: 8116976878989070494, guid: 55cf2701f2a71c042921d6682c826cf0,
+        type: 3}
+      propertyPath: DoorSpeed
+      value: 2
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116976878989070494, guid: 55cf2701f2a71c042921d6682c826cf0,
+        type: 3}
+      propertyPath: ClosedDoorY
+      value: 2.15
+      objectReference: {fileID: 0}
+    - target: {fileID: 8116976878989070494, guid: 55cf2701f2a71c042921d6682c826cf0,
+        type: 3}
+      propertyPath: OpenedDoorY
+      value: -2
+      objectReference: {fileID: 0}
     - target: {fileID: 955772899682625248, guid: 55cf2701f2a71c042921d6682c826cf0,
         type: 3}
       propertyPath: _triggerController
