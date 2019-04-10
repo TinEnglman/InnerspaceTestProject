@@ -566,7 +566,7 @@ PrefabInstance:
     - target: {fileID: 6576222099889173112, guid: 55cf2701f2a71c042921d6682c826cf0,
         type: 3}
       propertyPath: m_Name
-      value: Lift
+      value: LiftEnter
       objectReference: {fileID: 0}
     - target: {fileID: 17463153954210931, guid: 55cf2701f2a71c042921d6682c826cf0,
         type: 3}

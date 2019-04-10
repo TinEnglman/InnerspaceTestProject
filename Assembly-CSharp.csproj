@@ -72,6 +72,7 @@
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\TriggerController.cs" />
     <Compile Include="Assets\Code\SceneControllers\MenuController.cs" />
+    <Compile Include="Assets\Code\SceneControllers\SimulationController.cs" />
     <Compile Include="Assets\Code\SceneLoader.cs" />
     <Compile Include="Assets\Code\TextLoader.cs" />
     <Compile Include="Assets\External\FG3D\Animation\Mecanim\ControlScript.cs" />
