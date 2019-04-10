@@ -684,7 +684,7 @@ GameObject:
   - component: {fileID: 2369840595925032801}
   - component: {fileID: 1530400575}
   m_Layer: 0
-  m_Name: Lift
+  m_Name: LiftEnter
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -724,8 +724,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _sceneIndex: 0
-  _liftDoor: {fileID: 0}
-  _liftDoorPannel: {fileID: 0}
 --- !u!65 &1530400575
 BoxCollider:
   m_ObjectHideFlags: 0

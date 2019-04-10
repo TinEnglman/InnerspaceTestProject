@@ -2,12 +2,12 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SceneController : MonoBehaviour
+public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
-    private LiftController _liftController = null;
+    private LiftEnterController _liftController = null;
     [SerializeField]
     private LoadingScreenController _loadingScreenController = null;
 
