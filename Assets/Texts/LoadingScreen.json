@@ -6,6 +6,10 @@
 			"localizedValue": "Enter lift"
 		},
 		{
+			"key": "LOADING_DONE",
+			"localizedValue": "Done"
+		},
+		{
 			"key": "LOADING_STARTED",
 			"localizedValue": "Loading..."
 		}

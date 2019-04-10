@@ -6,8 +6,10 @@ public class LiftExitController : MonoBehaviour
 {
     [SerializeField]
     private DoorController _doorController = null;
+    [SerializeField]
+    private WellcomeScreenController _wellcomeScreenController = null;
 
-    private void OnTriggerEnter(Collider other)
+    private void OnTriggerExit(Collider other)
     {
         //_doorController.set
     }

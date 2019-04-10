@@ -29,6 +29,7 @@ public class LoadingScreenController : MonoBehaviour
         SetTitleTextKey(EnterLiftKey);
         _currentHintTextKey = HintKeyPrefix + _currentHintIndex;
         _hintLabel.gameObject.SetActive(false);
+        _loadingSlider.gameObject.SetActive(false);
     }
 
     void Update()
@@ -45,6 +46,7 @@ public class LoadingScreenController : MonoBehaviour
     public void StartLoading()
     {
         _hintLabel.gameObject.SetActive(true);
+        _loadingSlider.gameObject.SetActive(true);
         SetTitleTextKey(LoadingStartedKey);
         SetLableTextKey(_currentHintIndex);
         RefreshLabels();
