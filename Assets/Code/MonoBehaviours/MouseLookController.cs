@@ -6,21 +6,22 @@ public class MouseLookController : MonoBehaviour
     private const string InputMouseY = "Mouse Y";
 
     [SerializeField]
-    private readonly float Sensitivity = 5.0f;
+    private readonly float Sensitivity = 3.0f;
     [SerializeField]
     private readonly float Smoothness = 2.0f;
+    [SerializeField]
+    private Vector2 initialLook = Vector2.up * 10;
 
     private Vector2 mouseLook;
     private Vector2 smoothV;
 
-    GameObject character;
+    private GameObject character;
 
     void Start()
     {
         character = this.transform.parent.gameObject; // fragile construct; refactor
     }
 
-    
     void Update()
     {
         Vector2 mouseDiffVector = new Vector2(Input.GetAxisRaw(InputMouseX), Input.GetAxisRaw(InputMouseY));
@@ -30,7 +31,7 @@ public class MouseLookController : MonoBehaviour
         smoothV.y = Mathf.Lerp(smoothV.y, mouseDiffVector.y, 1f / Smoothness);
         mouseLook += smoothV;
 
-        transform.localRotation = Quaternion.AngleAxis(-mouseLook.y, Vector3.right);
-        character.transform.localRotation = Quaternion.AngleAxis(mouseLook.x, character.transform.up);
+        transform.localRotation = Quaternion.AngleAxis(-(mouseLook + initialLook).y, Vector3.right);
+        character.transform.localRotation = Quaternion.AngleAxis((mouseLook + initialLook).x, character.transform.up);
     }
 }

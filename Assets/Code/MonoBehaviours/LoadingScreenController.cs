@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class LoadingScreenController : MonoBehaviour
 {
-   public ISceneLoader SceneLoader { get; set; }
+    public ISceneLoader SceneLoader { get; set; }
 
     [SerializeField]
     private int _numHints = 1;

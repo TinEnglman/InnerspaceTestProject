@@ -1,10 +1,9 @@
-﻿using System.Collections;
-using UnityEngine;
+﻿using UnityEngine;
 using UnityEngine.SceneManagement;
 
 public class SceneLoader : ISceneLoader
 {
-    AsyncOperation _loadingOperation = null;
+    private AsyncOperation _loadingOperation = null;
 
     public float Progress
     {

@@ -1,11 +1,9 @@
 ﻿using UnityEngine;
 
-public class LiftController : MonoBehaviour
+public class LiftEnterController : MonoBehaviour
 {
     [SerializeField]
     private int _sceneIndex = 0;
-    [SerializeField]
-    private GameObject _frontWall = null;
 
     public ISceneLoader SceneLoader { get; set; }
 
