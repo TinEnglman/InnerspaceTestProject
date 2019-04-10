@@ -19,5 +19,6 @@ public class MenuController : MonoBehaviour
         ISceneLoader sceneLoader = new SceneLoader();
         _liftController.SceneLoader = sceneLoader;
         _loadingScreenController.SceneLoader = sceneLoader;
+        _loadingScreenController.RefreshLabels();
     }
 }

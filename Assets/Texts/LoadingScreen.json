@@ -5,9 +5,9 @@
 			"key": "ENTER_LIFT",
 			"localizedValue": "Enter lift"
 		},
-		  {
+		{
 			"key": "LOADING_STARTED",
 			"localizedValue": "Loading..."
-		  }
+		}
 	]
 }
