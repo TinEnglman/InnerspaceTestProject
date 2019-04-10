@@ -18,7 +18,7 @@ public class SimulationController : MonoBehaviour
             LocalizationManager.Instance.TextLoader = new TextLoader();
             LocalizationManager.Instance.LoadData(_textFolderName);
 
-            _wellcomeScreenController.RefreshLabel();
+            _wellcomeScreenController.RefreshLabels();
         }
     }
 }

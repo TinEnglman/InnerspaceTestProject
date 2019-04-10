@@ -11,6 +11,6 @@ public class LiftExitController : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        //_doorController.set
+        //_wellcomeScreenController.
     }
 }

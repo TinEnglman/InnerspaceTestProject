@@ -62,6 +62,7 @@
   <ItemGroup>
     <Compile Include="Assets\Code\ISceneLoader.cs" />
     <Compile Include="Assets\Code\ITextLoader.cs" />
+    <Compile Include="Assets\Code\LoadingManager.cs" />
     <Compile Include="Assets\Code\LocalizationData.cs" />
     <Compile Include="Assets\Code\LocalizationManager.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\CharacterController.cs" />

@@ -5,7 +5,7 @@ public class LiftEnterController : MonoBehaviour
     [SerializeField]
     private int _sceneIndex = 0;
     [SerializeField]
-    private LoadingScreenController _loadingScreenController;
+    private LoadingScreenController _loadingScreenController = null;
 
     public ISceneLoader SceneLoader { get; set; }
 

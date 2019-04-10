@@ -19,15 +19,14 @@ public class LoadingScreenController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _hintLabel = null;
 
-    private int _currentHintIndex = 1;
     private string _currentTitleTextKey;
     private string _currentHintTextKey;
 
     void Start()
     {
-        _currentHintIndex = (int)Random.Range(1, _numHints);
+        LoadingManager.Instance.CurrentHintIndex = (int)Random.Range(1, _numHints);
         SetTitleTextKey(EnterLiftKey);
-        _currentHintTextKey = HintKeyPrefix + _currentHintIndex;
+        _currentHintTextKey = HintKeyPrefix + LoadingManager.Instance.CurrentHintIndex;
         _hintLabel.gameObject.SetActive(false);
         _loadingSlider.gameObject.SetActive(false);
     }
@@ -48,7 +47,7 @@ public class LoadingScreenController : MonoBehaviour
         _hintLabel.gameObject.SetActive(true);
         _loadingSlider.gameObject.SetActive(true);
         SetTitleTextKey(LoadingStartedKey);
-        SetLableTextKey(_currentHintIndex);
+        SetLableTextKey(LoadingManager.Instance.CurrentHintIndex);
         RefreshLabels();
     }
 
