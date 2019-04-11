@@ -2,23 +2,23 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuController : MonoBehaviour
+public class MenuController : MonoBehaviour // convert to DontDestroyOnLoad object?
 {
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
-    private LiftEnterController _liftController = null;
+    private int _numHints = 0;
     [SerializeField]
-    private LoadingScreenController _loadingScreenController = null;
+    private LoadingScreenController _loadingScreenController;
 
     void Start()
     {
         LocalizationManager.Instance.TextLoader = new TextLoader();
         LocalizationManager.Instance.LoadData(_textFolderName);
 
-        ISceneLoader sceneLoader = new SceneLoader();
-        _liftController.SceneLoader = sceneLoader;
-        _loadingScreenController.SceneLoader = sceneLoader;
-        _loadingScreenController.RefreshLabels();
+        LoadingManager.Instance.Init(_numHints);
+        LoadingManager.Instance.SceneLoader = new SceneLoader();
+
+        _loadingScreenController.Init();
     }
 }

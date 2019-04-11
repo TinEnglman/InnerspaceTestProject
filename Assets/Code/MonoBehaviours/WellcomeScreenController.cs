@@ -4,11 +4,6 @@ using UnityEngine.UI;
 
 public class WellcomeScreenController : MonoBehaviour
 {
-    private readonly string LoadingDoneKey = "LOADING_DONE";
-    private readonly string HintKeyPrefix = "HINT_";
-
-    [SerializeField]
-    private int _numHints = 0;
     [SerializeField]
     private Slider _loadingSlider = null;
     [SerializeField]
@@ -21,8 +16,8 @@ public class WellcomeScreenController : MonoBehaviour
 
     void Start()
     {
-        SetTitleTextKey(LoadingDoneKey);
-        SetLableTextKey(LoadingManager.Instance.CurrentHintIndex);
+        SetTitleTextKey(LoadingManager.Instance.LoadingDoneKey);
+        SetLableTextKey(LoadingManager.Instance.HintKey);
         _loadingSlider.value = 1;
         RefreshLabels();
     }
@@ -45,8 +40,8 @@ public class WellcomeScreenController : MonoBehaviour
         _currentTitleTextKey = textKey;
     }
 
-    private void SetLableTextKey(int index)
+    private void SetLableTextKey(string textKey)
     {
-        _currentHintTextKey = HintKeyPrefix + ((index - 1) % _numHints + 1);
+        _currentHintTextKey = textKey;
     }
 }

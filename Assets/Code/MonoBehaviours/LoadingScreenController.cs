@@ -4,14 +4,6 @@ using UnityEngine.UI;
 
 public class LoadingScreenController : MonoBehaviour
 {
-    public ISceneLoader SceneLoader { get; set; }
-
-    private readonly string EnterLiftKey = "ENTER_LIFT";
-    private readonly string LoadingStartedKey = "LOADING_STARTED";
-    private readonly string HintKeyPrefix = "HINT_";
-
-    [SerializeField]
-    private int _numHints = 0;
     [SerializeField]
     private Slider _loadingSlider = null;
     [SerializeField]
@@ -22,18 +14,18 @@ public class LoadingScreenController : MonoBehaviour
     private string _currentTitleTextKey;
     private string _currentHintTextKey;
 
-    void Start()
+    public void Init()
     {
-        LoadingManager.Instance.CurrentHintIndex = (int)Random.Range(1, _numHints);
-        SetTitleTextKey(EnterLiftKey);
-        _currentHintTextKey = HintKeyPrefix + LoadingManager.Instance.CurrentHintIndex;
+        SetTitleTextKey(LoadingManager.Instance.EnterLiftKey);
+        _currentHintTextKey = LoadingManager.Instance.HintKeyPrefix + LoadingManager.Instance.CurrentHintIndex;
         _hintLabel.gameObject.SetActive(false);
         _loadingSlider.gameObject.SetActive(false);
+        RefreshLabels();
     }
 
     void Update()
     {
-        _loadingSlider.value = SceneLoader.Progress;
+        _loadingSlider.value = LoadingManager.Instance.GetProgress();
     }
 
     public void RefreshLabels()
@@ -42,12 +34,22 @@ public class LoadingScreenController : MonoBehaviour
         _hintLabel.text = LocalizationManager.Instance.GetText(_currentHintTextKey);
     }
 
+    public void SetTitleActive(bool active)
+    {
+        _titleLabel.gameObject.SetActive(active);
+    }
+
+    public void SetLabelActive(bool active)
+    {
+        _hintLabel.gameObject.SetActive(active);
+    }
+
     public void StartLoading()
     {
         _hintLabel.gameObject.SetActive(true);
         _loadingSlider.gameObject.SetActive(true);
-        SetTitleTextKey(LoadingStartedKey);
-        SetLableTextKey(LoadingManager.Instance.CurrentHintIndex);
+        SetTitleTextKey(LoadingManager.Instance.LoadingStartedKey);
+        SetLableTextKey(LoadingManager.Instance.HintKey);
         RefreshLabels();
     }
 
@@ -56,8 +58,8 @@ public class LoadingScreenController : MonoBehaviour
         _currentTitleTextKey = textKey;
     }
 
-    private void SetLableTextKey(int index)
+    private void SetLableTextKey(string labelKey)
     {
-        _currentHintTextKey = HintKeyPrefix + ((index - 1) % _numHints + 1);
+        _currentHintTextKey = labelKey;
     }
 }

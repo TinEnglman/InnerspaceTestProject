@@ -7,11 +7,9 @@ public class LiftEnterController : MonoBehaviour
     [SerializeField]
     private LoadingScreenController _loadingScreenController = null;
 
-    public ISceneLoader SceneLoader { get; set; }
-
     private void OnTriggerEnter(Collider other)
     {
+        LoadingManager.Instance.StartLoading(_sceneIndex);
         _loadingScreenController.StartLoading();
-        SceneLoader.LoadScene(_sceneIndex);
     }
 }

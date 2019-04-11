@@ -11803,20 +11803,19 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8255657683643747047, guid: e12c82550f244ab4aab4f6a3879bf4a9,
+        type: 3}
+      propertyPath: m_text
+      value: Very useful debug text that has a lot of substance. Some might say way
+        to much. But alas more is needed.
+      objectReference: {fileID: 0}
+    - target: {fileID: 8255657683643747047, guid: e12c82550f244ab4aab4f6a3879bf4a9,
+        type: 3}
+      propertyPath: m_textInfo.characterCount
+      value: 104
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: e12c82550f244ab4aab4f6a3879bf4a9, type: 3}
---- !u!114 &694832607212659047 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 6084098346177531134, guid: e12c82550f244ab4aab4f6a3879bf4a9,
-    type: 3}
-  m_PrefabInstance: {fileID: 694832607212659046}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 58490ede5aecdc24583a706d4886f8e2, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
 --- !u!1001 &2089176132990178417
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11984,4 +11983,4 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 68b9853f804609c4c9ff1d74fe661c8b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  _wellcomeScreenController: {fileID: 694832607212659047}
+  _wellcomeScreenController: {fileID: 0}
