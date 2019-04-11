@@ -4,10 +4,6 @@ using UnityEngine.UI;
 
 public class LoadingScreenController : MonoBehaviour
 {
-    public ISceneLoader SceneLoader { get; set; }
-
-    [SerializeField]
-    private int _numHints = 1;
     [SerializeField]
     private Slider _loadingSlider = null;
     [SerializeField]
@@ -15,17 +11,55 @@ public class LoadingScreenController : MonoBehaviour
     [SerializeField]
     private TextMeshProUGUI _hintLabel = null;
 
-    private int currentHintIndex = 1;
+    private string _currentTitleTextKey;
+    private string _currentHintTextKey;
 
-    void Start()
+    public void Init()
     {
-        currentHintIndex = (int)Random.Range(1, _numHints);
+        SetTitleTextKey(LoadingManager.Instance.EnterLiftKey);
+        SetLableTextKey(LoadingManager.Instance.HintKey);
+        _hintLabel.gameObject.SetActive(false);
+        _loadingSlider.gameObject.SetActive(false);
+        RefreshLabels();
     }
 
     void Update()
     {
-        _loadingSlider.value = SceneLoader.Progress;
-        _titleLabel.text = LocalizationManager.Instance.GetText("ENTER_LIFT");
-        _hintLabel.text = LocalizationManager.Instance.GetText("HINT_" + currentHintIndex);
+        _loadingSlider.value = LoadingManager.Instance.GetProgress();
+    }
+
+    public void RefreshLabels()
+    {
+        _titleLabel.text = LocalizationManager.Instance.GetText(_currentTitleTextKey);
+        _hintLabel.text = LocalizationManager.Instance.GetText(_currentHintTextKey);
+    }
+
+    public void SetTitleActive(bool active)
+    {
+        _titleLabel.gameObject.SetActive(active);
+    }
+
+    public void SetLabelActive(bool active)
+    {
+        _hintLabel.gameObject.SetActive(active);
+    }
+
+    public void StartLoading()
+    {
+        _hintLabel.gameObject.SetActive(true);
+        _loadingSlider.gameObject.SetActive(true);
+        SetTitleTextKey(LoadingManager.Instance.LoadingStartedKey);
+        SetLableTextKey(LoadingManager.Instance.HintKey);
+        RefreshLabels();
+    }
+
+    private void SetTitleTextKey(string textKey)
+    {
+        _currentTitleTextKey = textKey;
+    }
+
+    private void SetLableTextKey(string labelKey)
+    {
+        _currentHintTextKey = labelKey;
     }
 }

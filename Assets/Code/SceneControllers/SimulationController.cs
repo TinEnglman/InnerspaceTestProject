@@ -7,11 +7,16 @@ public class SimulationController : MonoBehaviour
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
-    private LiftExitController _liftController = null;
+    private WellcomeScreenController _wellcomeScreenController;
 
     void Start()
     {
-        //LocalizationManager.Instance.TextLoader = new TextLoader();
-        //LocalizationManager.Instance.LoadData(_textFolderName);
+        if (LocalizationManager.Instance.TextLoader == null)
+        {
+            LocalizationManager.Instance.TextLoader = new TextLoader();
+            LocalizationManager.Instance.LoadData(_textFolderName);
+        }
+
+        _wellcomeScreenController.Init();
     }
 }

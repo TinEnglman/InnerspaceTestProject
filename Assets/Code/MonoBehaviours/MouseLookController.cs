@@ -10,7 +10,7 @@ public class MouseLookController : MonoBehaviour
     [SerializeField]
     private readonly float Smoothness = 2.0f;
     [SerializeField]
-    private Vector2 initialLook = Vector2.up * 10;
+    private Vector2 initialLook = Vector2.zero;
 
     private Vector2 mouseLook;
     private Vector2 smoothV;

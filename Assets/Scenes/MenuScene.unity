@@ -284,26 +284,6 @@ PrefabInstance:
       propertyPath: m_Name
       value: LoadingScreen
       objectReference: {fileID: 0}
-    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
-        type: 3}
-      propertyPath: _loadingSlider
-      value: 
-      objectReference: {fileID: 457648246}
-    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
-        type: 3}
-      propertyPath: _titleLabel
-      value: 
-      objectReference: {fileID: 1308738242}
-    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
-        type: 3}
-      propertyPath: _hintLabel
-      value: 
-      objectReference: {fileID: 1235170598}
-    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
-        type: 3}
-      propertyPath: _numHints
-      value: 6
-      objectReference: {fileID: 0}
     - target: {fileID: 8878132528714201464, guid: 113ab644160fbf848875c3f1d6df40ce,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -384,6 +364,26 @@ PrefabInstance:
       propertyPath: m_isInputParsingRequired
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _loadingSlider
+      value: 
+      objectReference: {fileID: 457648246}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _titleLabel
+      value: 
+      objectReference: {fileID: 1308738242}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _hintLabel
+      value: 
+      objectReference: {fileID: 1235170598}
+    - target: {fileID: 8992648913848148986, guid: 113ab644160fbf848875c3f1d6df40ce,
+        type: 3}
+      propertyPath: _numHints
+      value: 6
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 113ab644160fbf848875c3f1d6df40ce, type: 3}
 --- !u!114 &1235170598 stripped
@@ -420,18 +420,6 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
---- !u!114 &1396596009 stripped
-MonoBehaviour:
-  m_CorrespondingSourceObject: {fileID: 2369840595925032801, guid: 55cf2701f2a71c042921d6682c826cf0,
-    type: 3}
-  m_PrefabInstance: {fileID: 2020711735}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 0}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 7dbde4074689975449c2994b429daa81, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!1001 &1595998770
@@ -538,7 +526,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   _textFolderName: Texts
-  _liftController: {fileID: 1396596009}
+  _numHints: 6
   _loadingScreenController: {fileID: 1242860870}
 --- !u!4 &1639485074
 Transform:
@@ -583,6 +571,11 @@ PrefabInstance:
       propertyPath: _sceneIndex
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2369840595925032801, guid: 55cf2701f2a71c042921d6682c826cf0,
+        type: 3}
+      propertyPath: _loadingScreenController
+      value: 
+      objectReference: {fileID: 1242860870}
     - target: {fileID: 17463153954210931, guid: 55cf2701f2a71c042921d6682c826cf0,
         type: 3}
       propertyPath: m_LocalPosition.x
