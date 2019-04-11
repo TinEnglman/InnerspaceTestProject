@@ -71,6 +71,7 @@
     <Compile Include="Assets\Code\MonoBehaviours\LiftExitController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LoadingScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\ScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\TriggerController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\WellcomeScreenController.cs" />
     <Compile Include="Assets\Code\SceneControllers\MenuController.cs" />

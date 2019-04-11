@@ -17,6 +17,6 @@ public class SimulationController : MonoBehaviour
             LocalizationManager.Instance.LoadData(_textFolderName);
         }
 
-        _wellcomeScreenController.Init();
+        _wellcomeScreenController.Init(LoadingManager.Instance.LoadingDoneKey, LoadingManager.Instance.HintKey);
     }
 }
