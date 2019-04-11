@@ -14,14 +14,14 @@ public class WellcomeScreenController : MonoBehaviour
     private string _currentTitleTextKey;
     private string _currentHintTextKey;
 
-    void Start()
+    public void Init()
     {
         SetTitleTextKey(LoadingManager.Instance.LoadingDoneKey);
         SetLableTextKey(LoadingManager.Instance.HintKey);
         _loadingSlider.value = 1;
         RefreshLabels();
     }
-
+  
     public void RefreshLabels()
     {
         _titleLabel.text = LocalizationManager.Instance.GetText(_currentTitleTextKey);

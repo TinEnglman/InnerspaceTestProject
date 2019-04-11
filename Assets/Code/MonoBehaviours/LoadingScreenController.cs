@@ -17,7 +17,7 @@ public class LoadingScreenController : MonoBehaviour
     public void Init()
     {
         SetTitleTextKey(LoadingManager.Instance.EnterLiftKey);
-        _currentHintTextKey = LoadingManager.Instance.HintKeyPrefix + LoadingManager.Instance.CurrentHintIndex;
+        SetLableTextKey(LoadingManager.Instance.HintKey);
         _hintLabel.gameObject.SetActive(false);
         _loadingSlider.gameObject.SetActive(false);
         RefreshLabels();
