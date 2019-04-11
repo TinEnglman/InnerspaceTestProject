@@ -10,6 +10,8 @@ public class MenuController : MonoBehaviour
     private int _numHints = 0;
     [SerializeField]
     private LoadingScreenController _loadingScreenController;
+    [SerializeField]
+    private CameraScreenController _cameraScreenController;
 
     void Start()
     {
@@ -20,5 +22,8 @@ public class MenuController : MonoBehaviour
         LoadingManager.Instance.SceneLoader = new SceneLoader();
 
         _loadingScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
+        _cameraScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
+
+
     }
 }
