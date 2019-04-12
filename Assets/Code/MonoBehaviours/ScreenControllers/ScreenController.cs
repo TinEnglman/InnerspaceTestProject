@@ -14,7 +14,7 @@ public class ScreenController : MonoBehaviour
     private string _currentTitleTextKey;
     private string _currentHintTextKey;
 
-    public void Init(string initialTitleTextKey, string initialHintTextKey)
+    public virtual void Init(string initialTitleTextKey, string initialHintTextKey)
     {
         SetTitleTextKey(initialTitleTextKey);
         SetLableTextKey(initialHintTextKey);
