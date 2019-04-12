@@ -575,35 +575,45 @@ PrefabInstance:
       propertyPath: _enableDmmScale
       value: 1
       objectReference: {fileID: 0}
+    - target: {fileID: 2846192291854238162, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
+        type: 3}
+      propertyPath: _screenRotation.x
+      value: -20
+      objectReference: {fileID: 0}
+    - target: {fileID: 2846192291854238162, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
+        type: 3}
+      propertyPath: _screenLookOffset.y
+      value: 0.45
+      objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalPosition.x
-      value: -0.45
+      value: -0.439
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalPosition.y
-      value: 1.725
+      value: 1.892
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalPosition.z
-      value: 15.403
+      value: 15.075
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalRotation.x
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalRotation.y
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}
       propertyPath: m_LocalRotation.z
-      value: -0
+      value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6427511627510279691, guid: 35c0c9392dc2a9e4ca0b21547b1be0f3,
         type: 3}

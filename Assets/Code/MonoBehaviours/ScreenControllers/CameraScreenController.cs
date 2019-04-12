@@ -13,6 +13,8 @@ public class CameraScreenController : LoadingScreenController
     [SerializeField]
     private Vector3 _screenPosition = Vector3.zero;
     [SerializeField]
+    private Vector3 _screenLookOffset = Vector3.zero;
+    [SerializeField]
     private Camera _camera = null;
 
     private GameObject _screenPositionTracker = null;
@@ -42,7 +44,8 @@ public class CameraScreenController : LoadingScreenController
         base.Update();
 
         _targetPosition = _screenPositionTracker.transform.position;
-        _targetRotation = _camera.transform.rotation;
+        Vector3 lookAt = _targetPosition - _camera.transform.position + _screenLookOffset;
+        _targetRotation = Quaternion.LookRotation(lookAt);
 
         UpdatePosition();
         UpdateRotation();
