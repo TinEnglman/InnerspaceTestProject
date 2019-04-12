@@ -2,14 +2,16 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class MenuController : MonoBehaviour // convert to DontDestroyOnLoad object?
+public class MenuController : MonoBehaviour
 {
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
     private int _numHints = 0;
     [SerializeField]
-    private LoadingScreenController _loadingScreenController;
+    private LoadingScreenController _loadingScreenController = null;
+    [SerializeField]
+    private CameraScreenController _cameraScreenController = null;
 
     void Start()
     {
@@ -19,6 +21,7 @@ public class MenuController : MonoBehaviour // convert to DontDestroyOnLoad obje
         LoadingManager.Instance.Init(_numHints);
         LoadingManager.Instance.SceneLoader = new SceneLoader();
 
-        _loadingScreenController.Init();
+        _loadingScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
+        _cameraScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
     }
 }

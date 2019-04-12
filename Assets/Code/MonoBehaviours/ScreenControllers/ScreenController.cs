@@ -2,28 +2,26 @@
 using UnityEngine;
 using UnityEngine.UI;
 
-public class LoadingScreenController : MonoBehaviour
+public class ScreenController : MonoBehaviour
 {
     [SerializeField]
-    private Slider _loadingSlider = null;
+    protected Slider _loadingSlider = null;
     [SerializeField]
-    private TextMeshProUGUI _titleLabel = null;
+    protected TextMeshProUGUI _titleLabel = null;
     [SerializeField]
-    private TextMeshProUGUI _hintLabel = null;
+    protected TextMeshProUGUI _hintLabel = null;
 
     private string _currentTitleTextKey;
     private string _currentHintTextKey;
 
-    public void Init()
+    public virtual void Init(string initialTitleTextKey, string initialHintTextKey)
     {
-        SetTitleTextKey(LoadingManager.Instance.EnterLiftKey);
-        SetLableTextKey(LoadingManager.Instance.HintKey);
-        _hintLabel.gameObject.SetActive(false);
-        _loadingSlider.gameObject.SetActive(false);
+        SetTitleTextKey(initialTitleTextKey);
+        SetLableTextKey(initialHintTextKey);
         RefreshLabels();
     }
 
-    void Update()
+    public virtual void Update()
     {
         _loadingSlider.value = LoadingManager.Instance.GetProgress();
     }
@@ -44,21 +42,12 @@ public class LoadingScreenController : MonoBehaviour
         _hintLabel.gameObject.SetActive(active);
     }
 
-    public void StartLoading()
-    {
-        _hintLabel.gameObject.SetActive(true);
-        _loadingSlider.gameObject.SetActive(true);
-        SetTitleTextKey(LoadingManager.Instance.LoadingStartedKey);
-        SetLableTextKey(LoadingManager.Instance.HintKey);
-        RefreshLabels();
-    }
-
-    private void SetTitleTextKey(string textKey)
+    protected void SetTitleTextKey(string textKey)
     {
         _currentTitleTextKey = textKey;
     }
 
-    private void SetLableTextKey(string labelKey)
+    protected void SetLableTextKey(string labelKey)
     {
         _currentHintTextKey = labelKey;
     }
