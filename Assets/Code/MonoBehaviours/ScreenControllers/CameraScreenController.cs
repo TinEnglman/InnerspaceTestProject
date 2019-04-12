@@ -4,9 +4,9 @@ using UnityEngine;
 
 public class CameraScreenController : LoadingScreenController
 {
-    private readonly float _optimalDistance = 1;
-    private readonly float _baseTranslationSpeed = 15f;
-    private readonly float _baseRotationSpeed = 5;
+    private const float _optimalDistance = 1;
+    private const float _baseTranslationSpeed = 15f;
+    private const float _baseRotationSpeed = 5;
 
     [SerializeField]
     private bool _enableDmmScale = true;

@@ -4,10 +4,10 @@ using UnityEngine;
 
 public class LoadingManager
 {
-    private readonly string _enterLiftKey = "ENTER_LIFT";
-    private readonly string _loadingStartedKey = "LOADING_STARTED";
-    private readonly string _loadingDoneKey = "LOADING_DONE";
-    private readonly string _hintKeyPrefix = "HINT_";
+    private const string _enterLiftKey = "ENTER_LIFT";
+    private const string _loadingStartedKey = "LOADING_STARTED";
+    private const string _loadingDoneKey = "LOADING_DONE";
+    private const string _hintKeyPrefix = "HINT_";
 
     private int _numHints;
     private static LoadingManager _instance;
