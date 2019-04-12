@@ -4,6 +4,14 @@ using UnityEngine.UI;
 
 public class LoadingScreenController : ScreenController
 {
+    public override void Init(string initialTitleTextKey, string initialHintTextKey)
+    {
+        base.Init(initialTitleTextKey, initialHintTextKey);
+        _loadingSlider.gameObject.SetActive(false);
+        _hintLabel.gameObject.SetActive(false);
+
+    }
+
     public void StartLoading()
     {
         _hintLabel.gameObject.SetActive(true);

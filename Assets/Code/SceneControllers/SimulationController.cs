@@ -2,12 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class SimulationController : MonoBehaviour
+public class SimulationController : MonoBehaviour // extract "MenuController" ?
 {
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
-    private WellcomeScreenController _wellcomeScreenController;
+    private WellcomeScreenController _wellcomeScreenController = null;
+    [SerializeField]
+    private CameraScreenController _cameraScreenController = null;
 
     void Start()
     {
@@ -18,5 +20,6 @@ public class SimulationController : MonoBehaviour
         }
 
         _wellcomeScreenController.Init(LoadingManager.Instance.LoadingDoneKey, LoadingManager.Instance.HintKey);
+        _cameraScreenController.Init(LoadingManager.Instance.LoadingDoneKey, LoadingManager.Instance.HintKey);
     }
 }
