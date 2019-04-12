@@ -21,7 +21,7 @@ public class ScreenController : MonoBehaviour
         RefreshLabels();
     }
 
-    void Update()
+    public virtual void Update()
     {
         _loadingSlider.value = LoadingManager.Instance.GetProgress();
     }
