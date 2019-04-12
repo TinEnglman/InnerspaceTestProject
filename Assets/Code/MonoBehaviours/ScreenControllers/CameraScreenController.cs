@@ -5,6 +5,8 @@ using UnityEngine;
 public class CameraScreenController : LoadingScreenController
 {
     private readonly float _optimalDistance = 1;
+    private readonly float _baseTranslationSpeed = 15f;
+    private readonly float _baseRotationSpeed = 5;
 
     [SerializeField]
     private bool _enableDmmScale = true;
@@ -16,9 +18,13 @@ public class CameraScreenController : LoadingScreenController
     private GameObject _screenPositionTracker = null;
     private float _distanceFromCamera = 0;
 
+    private Vector3 _targetPosition = Vector3.zero;
+    private Quaternion _targetRotation = Quaternion.identity;
+
     public override void Init(string initialTitleTextKey, string initialHintTextKey)
     {
         base.Init(initialTitleTextKey, initialHintTextKey);
+
         _screenPositionTracker = new GameObject();
         _screenPositionTracker.transform.SetParent(_camera.transform);
         _screenPositionTracker.transform.localPosition = _screenPosition;
@@ -35,8 +41,24 @@ public class CameraScreenController : LoadingScreenController
     {
         base.Update();
 
-        transform.position = _screenPositionTracker.transform.position;
-        transform.rotation = _camera.transform.rotation;
+        _targetPosition = _screenPositionTracker.transform.position;
+        _targetRotation = _camera.transform.rotation;
+
+        UpdatePosition();
+        UpdateRotation();
+    }
+
+    private void UpdatePosition()
+    {
+        Vector3 currentTranslationVelocity = (_targetPosition - transform.position) * _baseTranslationSpeed;
+        transform.position += currentTranslationVelocity * Time.deltaTime;
+
+    }
+
+    private void UpdateRotation()
+    {
+        float currentRotationalStep = (_targetRotation * transform.rotation).eulerAngles.magnitude * _baseRotationSpeed * Time.deltaTime;
+        transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, currentRotationalStep);
     }
 
     ~CameraScreenController()

@@ -11,7 +11,7 @@ public class DoorController : MonoBehaviour
     [SerializeField]
     private TriggerController _triggerController = null;
 
-    void FixedUpdate()
+    void FixedUpdate() // refactor
     {
         float doorYDiff = 0;
         if (_triggerController.IsTriggered && !Mathf.Approximately(transform.position.y, OpenedDoorY))
