@@ -19,7 +19,7 @@ public class SceneLoader : ISceneLoader
             }
         }
     }
-
+    
     public void LoadScene(int sceneBuildIndex)
     {
         _loadingOperation = SceneManager.LoadSceneAsync(sceneBuildIndex);
