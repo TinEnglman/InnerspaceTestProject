@@ -2,6 +2,7 @@
 using UnityEngine;
 using System.IO;
 
+
 public class LocalizationManager
 {
     private const string ErrorMessagePrefix = "Text Key: '";
@@ -33,6 +34,7 @@ public class LocalizationManager
         {
             return ErrorMessagePrefix + textKey + ErrorMessageSufix;
         }
+
     }
 
     public void LoadData(string folderName)
@@ -58,6 +60,11 @@ public class LocalizationManager
         {
             _localizations.Add(localization.Key, localization.Value);
         }
+    }
+
+    public Dictionary<string, string> GetLocaizations()
+    {
+        return _localizations;
     }
 
     private Dictionary<string, string> LoadFile(FileInfo file)
