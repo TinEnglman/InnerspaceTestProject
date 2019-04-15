@@ -80,7 +80,6 @@ namespace Tests
             Assert.AreEqual(result, expectedResult);
         }
 
-        
         [Test]
         public void LocalizationManagerTest_LoadData()
         {
