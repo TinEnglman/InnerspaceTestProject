@@ -4,14 +4,16 @@ using UnityEngine;
 
 public class MenuController : MonoBehaviour
 {
+    private const string InputKeystateEscape = "escape";
+
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
     private int _numHints = 0;
     [SerializeField]
-    private LoadingScreenController _loadingScreenController = null;
+    private LiftLoadingScreenController _loadingScreenController = null;
     [SerializeField]
-    private CameraScreenController _cameraScreenController = null;
+    private CameraLoadingScreenController _cameraScreenController = null;
 
     void Start()
     {
@@ -23,5 +25,16 @@ public class MenuController : MonoBehaviour
 
         _loadingScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
         _cameraScreenController.Init(LoadingManager.Instance.EnterLiftKey, LoadingManager.Instance.HintKey);
+        _cameraScreenController.ScreenScaler = new ScreenScalerDmm();
+        _cameraScreenController.SetupScale();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(InputKeystateEscape)) // move to separate module
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Application.Quit();
+        }
     }
 }

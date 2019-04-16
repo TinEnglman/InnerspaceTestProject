@@ -1,13 +1,17 @@
-﻿using System.Collections;
-using System.Collections.Generic;
+﻿using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
-public class CameraScreenController : LoadingScreenController
+public class CameraLoadingScreenController : LoadingScreenController
 {
-    private const float _optimalDistance = 1;
-    private const float _baseTranslationSpeed = 15f;
-    private const float _baseRotationSpeed = 5;
+    private const string LoadingSliderName = "SliderVR";
+    private const string TitleLabelName = "TitleLabelVR";
+    private const string HintLableName = "HintLabelVR";
 
+    [SerializeField]
+    private float _baseTranslationSpeed = 15f;
+    [SerializeField]
+    private float _baseRotationSpeed = 5f;
     [SerializeField]
     private bool _enableDmmScale = true;
     [SerializeField]
@@ -18,24 +22,31 @@ public class CameraScreenController : LoadingScreenController
     private Camera _camera = null;
 
     private GameObject _screenPositionTracker = null;
-    private float _distanceFromCamera = 0;
-
     private Vector3 _targetPosition = Vector3.zero;
     private Quaternion _targetRotation = Quaternion.identity;
 
+    public IScreenScaler ScreenScaler { get; set; }
+
     public override void Init(string initialTitleTextKey, string initialHintTextKey)
     {
+        LoadingSlider = GameObject.Find(LoadingSliderName).GetComponent<Slider>();
+        TitleLabel = GameObject.Find(TitleLabelName).GetComponent<TextMeshProUGUI>();
+        HintLabel = GameObject.Find(HintLableName).GetComponent<TextMeshProUGUI>();
+
         base.Init(initialTitleTextKey, initialHintTextKey);
 
         _screenPositionTracker = new GameObject();
         _screenPositionTracker.transform.SetParent(_camera.transform);
         _screenPositionTracker.transform.localPosition = _screenPosition;
 
+        RefreshLabels();
+    }
+
+    public void SetupScale()
+    {
         if (_enableDmmScale)
-        { 
-            _distanceFromCamera = _screenPosition.magnitude;
-            float scale = _screenPosition.magnitude / _optimalDistance;
-            transform.localScale = Vector3.one * scale;
+        {
+            transform.localScale = Vector3.one * ScreenScaler.GetScale(_screenPosition.magnitude);
         }
     }
 
@@ -55,7 +66,6 @@ public class CameraScreenController : LoadingScreenController
     {
         Vector3 currentTranslationVelocity = (_targetPosition - transform.position) * _baseTranslationSpeed;
         transform.position += currentTranslationVelocity * Time.deltaTime;
-
     }
 
     private void UpdateRotation()
@@ -64,7 +74,7 @@ public class CameraScreenController : LoadingScreenController
         transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, currentRotationalStep);
     }
 
-    ~CameraScreenController()
+    ~CameraLoadingScreenController()
     {
         if (_screenPositionTracker != null && _screenPositionTracker.gameObject != null)
         { 

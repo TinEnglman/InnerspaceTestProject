@@ -2,12 +2,15 @@
 using UnityEngine;
 using System.IO;
 
+
 public class LocalizationManager
 {
+    private const string ErrorMessagePrefix = "Text Key: '";
+    private const string ErrorMessageSufix = "' does not exist!";
     public ITextLoader TextLoader { get; set; }
 
     private static LocalizationManager _instance;
-    private Dictionary<string, string> _localizations = new Dictionary<string, string>();
+    private Dictionary<string, string> _localizations;
  
     public static LocalizationManager Instance
     {
@@ -23,7 +26,15 @@ public class LocalizationManager
 
     public string GetText(string textKey)
     {
-        return _localizations[textKey];
+        if (_localizations.ContainsKey(textKey))
+        {
+            return _localizations[textKey];
+        }
+        else
+        {
+            return ErrorMessagePrefix + textKey + ErrorMessageSufix;
+        }
+
     }
 
     public void LoadData(string folderName)
@@ -38,6 +49,24 @@ public class LocalizationManager
         }
     }
 
+    public void ClearData()
+    {
+        _localizations.Clear();
+    }
+
+    public void AddLocalizations(Dictionary<string, string> addLocalizations)
+    {
+        foreach (var localization in addLocalizations)
+        {
+            _localizations.Add(localization.Key, localization.Value);
+        }
+    }
+
+    public Dictionary<string, string> GetLocaizations()
+    {
+        return _localizations;
+    }
+
     private Dictionary<string, string> LoadFile(FileInfo file)
     {
         Dictionary<string, string> localizations = new Dictionary<string, string>();
@@ -47,14 +76,9 @@ public class LocalizationManager
         }
         return localizations;
     }
-
-    private void AddLocalizations(Dictionary<string, string> addLocalizations)
-    {
-        foreach (var localization in addLocalizations)
-        {
-            _localizations.Add(localization.Key, localization.Value);
-        }
-    }
     
-    private LocalizationManager() { }
+    private LocalizationManager()
+    {
+        _localizations = new Dictionary<string, string>();
+    }
 }

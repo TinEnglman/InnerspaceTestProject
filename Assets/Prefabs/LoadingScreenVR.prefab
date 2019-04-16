@@ -159,7 +159,7 @@ GameObject:
   - component: {fileID: 6427511626882360539}
   - component: {fileID: 6427511626882360540}
   m_Layer: 5
-  m_Name: Slider
+  m_Name: SliderVR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -247,7 +247,7 @@ GameObject:
   - component: {fileID: 6427511627012105962}
   - component: {fileID: 6427511627012105961}
   m_Layer: 5
-  m_Name: HintLabel
+  m_Name: HintLabelVR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -545,6 +545,10 @@ MonoBehaviour:
   _loadingSlider: {fileID: 6427511626882360540}
   _titleLabel: {fileID: 6427511627843749131}
   _hintLabel: {fileID: 6427511627012105961}
+  _enableDmmScale: 1
+  _screenPosition: {x: 0, y: 0, z: 0}
+  _screenLookOffset: {x: 0, y: 0, z: 0}
+  _camera: {fileID: 0}
 --- !u!1 &6427511627843749129
 GameObject:
   m_ObjectHideFlags: 0
@@ -557,7 +561,7 @@ GameObject:
   - component: {fileID: 6427511627843749132}
   - component: {fileID: 6427511627843749131}
   m_Layer: 0
-  m_Name: TitleLabel
+  m_Name: TitleLabelVR
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
