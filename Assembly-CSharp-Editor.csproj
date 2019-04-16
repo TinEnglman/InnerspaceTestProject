@@ -63,6 +63,7 @@
     <Compile Include="Assets\Editor\LoadingManagerTest.cs" />
     <Compile Include="Assets\Editor\LocalizationManagerTest.cs" />
     <Compile Include="Assets\Editor\SceneLoaderTest.cs" />
+    <Compile Include="Assets\Editor\ScreenScalerDmmTest.cs" />
     <Compile Include="Assets\Editor\TextLoaderTest.cs" />
     <Compile Include="Assets\External\FG3D\Vendor\Unity\Shaders\Hair\Editor\HairShaderGUI.cs" />
     <Compile Include="Assets\External\FG3D\Vendor\Unity\Shaders\Skin\Editor\VolundMultiStandardShaderGUI.cs" />

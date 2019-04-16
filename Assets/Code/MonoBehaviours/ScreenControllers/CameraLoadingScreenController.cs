@@ -7,7 +7,6 @@ public class CameraLoadingScreenController : LoadingScreenController
     private const string LoadingSliderName = "SliderVR";
     private const string TitleLabelName = "TitleLabelVR";
     private const string HintLableName = "HintLabelVR";
-    private const float _optimalDistance = 1f;
 
     [SerializeField]
     private float _baseTranslationSpeed = 15f;
@@ -23,10 +22,10 @@ public class CameraLoadingScreenController : LoadingScreenController
     private Camera _camera = null;
 
     private GameObject _screenPositionTracker = null;
-    private float _distanceFromCamera = 0;
-
     private Vector3 _targetPosition = Vector3.zero;
     private Quaternion _targetRotation = Quaternion.identity;
+
+    public IScreenScaler ScreenScaler { get; set; }
 
     public override void Init(string initialTitleTextKey, string initialHintTextKey)
     {
@@ -41,10 +40,13 @@ public class CameraLoadingScreenController : LoadingScreenController
         _screenPositionTracker.transform.localPosition = _screenPosition;
 
         RefreshLabels();
+    }
 
+    public void SetupScale()
+    {
         if (_enableDmmScale)
         {
-            SetupDmmScale();
+            transform.localScale = Vector3.one * ScreenScaler.GetScale(_screenPosition.magnitude);
         }
     }
 
@@ -70,13 +72,6 @@ public class CameraLoadingScreenController : LoadingScreenController
     {
         float currentRotationalStep = (_targetRotation * transform.rotation).eulerAngles.magnitude * _baseRotationSpeed * Time.deltaTime;
         transform.rotation = Quaternion.RotateTowards(transform.rotation, _targetRotation, currentRotationalStep);
-    }
-
-    private void SetupDmmScale()
-    {
-        _distanceFromCamera = _screenPosition.magnitude;
-        float scale = _screenPosition.magnitude / _optimalDistance;
-        transform.localScale = Vector3.one * scale;
     }
 
     ~CameraLoadingScreenController()

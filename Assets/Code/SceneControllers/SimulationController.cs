@@ -4,6 +4,8 @@ using UnityEngine;
 
 public class SimulationController : MonoBehaviour // extract "MenuController" ?
 {
+    private const string InputKeystateEscape = "escape";
+
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
@@ -19,7 +21,24 @@ public class SimulationController : MonoBehaviour // extract "MenuController" ?
             LocalizationManager.Instance.LoadData(_textFolderName);
         }
 
+        if (LoadingManager.Instance.SceneLoader == null)
+        {
+            LoadingManager.Instance.Init(1);
+            LoadingManager.Instance.SceneLoader = new SceneLoader();
+        }
+
         _wellcomeScreenController.Init(LoadingManager.Instance.LoadingDoneKey, LoadingManager.Instance.HintKey);
         _cameraScreenController.Init(LoadingManager.Instance.LoadingDoneKey, LoadingManager.Instance.HintKey);
+        _cameraScreenController.ScreenScaler = new ScreenScalerDmm();
+        _cameraScreenController.SetupScale();
+    }
+
+    void Update()
+    {
+        if (Input.GetKeyDown(InputKeystateEscape)) // move to separate module
+        {
+            Cursor.lockState = CursorLockMode.None;
+            Application.Quit();
+        }
     }
 }
