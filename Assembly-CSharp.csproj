@@ -71,10 +71,9 @@
     <Compile Include="Assets\Code\MonoBehaviours\LiftController\LiftExitController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\LiftController\TriggerController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\MouseLookController.cs" />
-    <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\CameraScreenController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\CameraLoadingScreenController.cs" />
+    <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\LiftLoadingScreenController.cs" />
     <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\LoadingScreenController.cs" />
-    <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\ScreenController.cs" />
-    <Compile Include="Assets\Code\MonoBehaviours\ScreenControllers\WellcomeScreenController.cs" />
     <Compile Include="Assets\Code\SceneControllers\MenuController.cs" />
     <Compile Include="Assets\Code\SceneControllers\SimulationController.cs" />
     <Compile Include="Assets\Code\SceneLoader.cs" />

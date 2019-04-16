@@ -7,9 +7,9 @@ public class SimulationController : MonoBehaviour // extract "MenuController" ?
     [SerializeField]
     private string _textFolderName = "Texts";
     [SerializeField]
-    private WellcomeScreenController _wellcomeScreenController = null;
+    private LiftLoadingScreenController _wellcomeScreenController = null;
     [SerializeField]
-    private CameraScreenController _cameraScreenController = null;
+    private CameraLoadingScreenController _cameraScreenController = null;
 
     void Start()
     {

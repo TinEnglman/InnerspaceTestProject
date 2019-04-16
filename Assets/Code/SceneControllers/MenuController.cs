@@ -9,9 +9,9 @@ public class MenuController : MonoBehaviour
     [SerializeField]
     private int _numHints = 0;
     [SerializeField]
-    private LoadingScreenController _loadingScreenController = null;
+    private LiftLoadingScreenController _loadingScreenController = null;
     [SerializeField]
-    private CameraScreenController _cameraScreenController = null;
+    private CameraLoadingScreenController _cameraScreenController = null;
 
     void Start()
     {
