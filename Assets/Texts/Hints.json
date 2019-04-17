@@ -3,27 +3,27 @@
 	[
 		{
 			"key": "HINT_1",
-			"localizedValue" : "Very useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Walking makes you uncomfortable? Try using teleport instead."
 		},
 		{
 			"key": "HINT_2",
-			"localizedValue" : "Extremly useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Even inslults feel more real in VR. Be considerate in a online enviroment."
 		},
 		{
 			"key": "HINT_3",
-			"localizedValue" : "Magnificently useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Consider using a 3D headset for complete sensory immersion."
 		},
 		{
 			"key": "HINT_4",
-			"localizedValue" : "Extraordinarily useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Don't remove your glasses! Most VR devices were designed with the visually impaired in mind."
 		},
 		{
 			"key": "HINT_5",
-			"localizedValue" : "Unitentionaly useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Make sure you are running at a appropriate framerate. Inconsistent performance can cause nausia."
 		},
 		{
 			"key": "HINT_6",
-			"localizedValue" : "Mysteriously useful advice. Additional advice to fill up space. Even more advice."
+			"localizedValue" : "Make sure you have enough room to spread your arms around. You don't whant to karate chop your coffe cup."
 		}
 	]
 }
