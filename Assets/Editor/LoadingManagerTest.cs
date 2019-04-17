@@ -37,6 +37,21 @@ namespace Tests
         }
 
         [Test]
+        public void LoadingManagerTest_HintKey_Edge()
+        {
+            const int hintIndex = 5;
+            const int numHints = 5;
+
+            LoadingManager.Instance.Init(numHints);
+            LoadingManager.Instance.CurrentHintIndex = hintIndex;
+
+            string result = LoadingManager.Instance.HintKey;
+            string expectedResult = "HINT_" + hintIndex;
+
+            Assert.AreEqual(result, expectedResult);
+        }
+
+        [Test]
         public void LoadingManagerTest_HintKey_Out_Of_Bounds()
         {
             const int hintIndex = 7;

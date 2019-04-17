@@ -55,7 +55,7 @@ public class LoadingManager
     public void Init(int numHints)
     {
         _numHints = numHints;
-        CurrentHintIndex = (int)Random.Range(1, _numHints);
+        CurrentHintIndex = (int)Random.Range(1, _numHints + 1);
     }
 
     public void StartLoading(int sceneIndex)
